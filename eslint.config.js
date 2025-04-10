@@ -6,46 +6,46 @@ import prettier from "eslint-config-prettier";
 import prettierPlugin from "eslint-plugin-prettier";
 
 export default tseslint.config(
-  {
-    files: ["**/*.ts"],
-    extends: [
-      eslint.configs.recommended,
-      ...tseslint.configs.recommended,
-      ...tseslint.configs.stylistic,
-      ...angular.configs.tsRecommended,
-      prettier,
-    ],
-    plugins: {
-      prettier: prettierPlugin,
-    },
-    processor: angular.processInlineTemplates,
-    rules: {
-      "prettier/prettier": "error",
-      "@angular-eslint/directive-selector": [
-        "error",
-        {
-          type: "attribute",
-          prefix: "app",
-          style: "camelCase",
-        },
-      ],
-      "@angular-eslint/component-selector": [
-        "error",
-        {
-          type: "element",
-          prefix: "app",
-          style: "kebab-case",
-        },
-      ],
-    },
+ {
+  files: ["**/*.ts"],
+  extends: [
+   eslint.configs.recommended,
+   ...tseslint.configs.recommended,
+   ...tseslint.configs.stylistic,
+   ...angular.configs.tsRecommended,
+   prettier,
+  ],
+  plugins: {
+   prettier: prettierPlugin,
   },
-  {
-    files: ["**/*.html"],
-    extends: [
-      ...angular.configs.templateRecommended,
-      ...angular.configs.templateAccessibility,
-      prettier,
-    ],
-    rules: {},
-  }
+  processor: angular.processInlineTemplates,
+  rules: {
+   "prettier/prettier": "error",
+   "@angular-eslint/directive-selector": [
+    "error",
+    {
+     type: "attribute",
+     prefix: "app",
+     style: "camelCase",
+    },
+   ],
+   "@angular-eslint/component-selector": [
+    "error",
+    {
+     type: "element",
+     prefix: "app",
+     style: "kebab-case",
+    },
+   ],
+  },
+ },
+ {
+  files: ["**/*.html"],
+  extends: [
+   ...angular.configs.templateRecommended,
+   ...angular.configs.templateAccessibility,
+   prettier,
+  ],
+  rules: {},
+ }
 );
