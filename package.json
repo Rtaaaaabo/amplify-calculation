@@ -20,8 +20,10 @@
     "@angular/platform-browser": "^18.2.13",
     "@angular/platform-browser-dynamic": "^18.2.13",
     "@angular/router": "^18.2.13",
+    "@ionic/angular": "^8.5.3",
     "aws-amplify": "^6.6.6",
     "rxjs": "~7.8.0",
+    "sass": "^1.86.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
@@ -49,6 +51,7 @@
     "prettier": "^3.5.3",
     "tsx": "^4.7.2",
     "typescript": "^5.4.5",
-    "typescript-eslint": "8.27.0"
+    "typescript-eslint": "8.27.0",
+    "@ionic/angular-toolkit": "latest"
   }
 }

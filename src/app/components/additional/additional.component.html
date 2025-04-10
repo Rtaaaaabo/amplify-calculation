@@ -1,0 +1,31 @@
+<ion-content class="ion-padding" color="light">
+ <div class="additional">
+  <h2>足し算計算機</h2>
+  <div>
+   <h3>{{ result }}</h3>
+  </div>
+  <ion-card>
+   <ion-card-header>
+    <ion-card-title>答えを入力してね</ion-card-title>
+   </ion-card-header>
+   <ion-card-content>
+    <div class="answer-box">
+     {{ answer }}
+    </div>
+    <ion-grid>
+     @for (row of keys; track row) {
+      <ion-row>
+       @for (col of row; track col) {
+        <ion-col size="3">
+         <ion-button expand="block">
+          {{ col }}
+         </ion-button>
+        </ion-col>
+       }
+      </ion-row>
+     }
+    </ion-grid>
+   </ion-card-content>
+  </ion-card>
+ </div>
+</ion-content>
